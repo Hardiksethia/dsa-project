@@ -19,4 +19,10 @@ public class Linkedlist {
             n = n.next;
         }
     }
+    public void insert(int data) {
+        Node newNode = new Node(data);
+        newNode.next = head;
+        head = newNode;
+    }
+    
 }
