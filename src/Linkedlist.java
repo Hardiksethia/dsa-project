@@ -24,5 +24,24 @@ public class Linkedlist {
         newNode.next = head;
         head = newNode;
     }
+
+    public void delete(int key) {
+        Node temp = head, prev = null;
+    
+        if (temp != null && temp.data == key) {
+            head = temp.next;
+            return;
+        }
+    
+        while (temp != null && temp.data != key) {
+            prev = temp;
+            temp = temp.next;
+        }
+    
+        if (temp == null) return;
+    
+        prev.next = temp.next;
+    }
+    
     
 }
